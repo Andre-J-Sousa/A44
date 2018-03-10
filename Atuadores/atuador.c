@@ -54,6 +54,7 @@ void EstruturaCasa(FILE *f){
 int main(){
 	
 	char *filename1="SensorConfigurations.txt", *filename2="SensorRules.txt";
+	int i=0;
 
 	FILE *f1, *f2;
 	f1 = fopen(filename1, "r");
@@ -68,6 +69,14 @@ int main(){
 		printf("Ficheiros encontrados com sucesso!\n\n");
 	
 	EstruturaCasa(f1);
+	
+	while ( casa[i].nomeDiv != NULL){		//Funcao de teste - PARA APAGAR
+		printf("Nome: %s\nSensores: %s\nAtuadores: %s\n\n", casa[i].nomeDiv, casa[i].Sensores, casa[i].Atuadores);
+		i++;
+	}
+	
+	fclose(f1);
+	fclose(f2);
 	
 	
 	return 1;
