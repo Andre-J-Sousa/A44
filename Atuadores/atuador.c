@@ -6,8 +6,8 @@
 
 struct Divisao{
 	char nomeDiv[50];
-	char *Sensores[9];
-	char *Atuadores[9];	
+	char Sensores[90];
+	char Atuadores[90];	
 };
 
 
@@ -30,7 +30,7 @@ int main(){
 			printf("ERRO!! Ficheiro %s não existe.\n", filename2);
 		return 0;
 	}else
-		printf("Nice\n");
+		printf("Ficheiros encontrados com sucesso!\n\n");
 	
 	EstruturaCasa(f1);
 	
